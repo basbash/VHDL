@@ -44,27 +44,27 @@ begin
 				
                 when S1 =>
 
-                if sentido = '0' then current_state <= S2;
+                if sentido = '1' then current_state <= S2;
                 else current_state <= S4;
                 end if;
 						  
                 when S2 =>
 
-				if sentido = '0' then
+		if sentido = '1' then
                     current_state <= S3;
                 else current_state <= S1;
                 end if;
                 
                 when S3 =>
                 
-                if sentido = '0' then
+                if sentido = '1' then
                     current_state <= S4;
                 else current_state <= S2;
                 end if;
                 
                 when S4 =>
                     
-                if sentido = '0' then
+                if sentido = '1' then
                     current_state <= S1;
                 else current_state <= S3;
                 end if;
